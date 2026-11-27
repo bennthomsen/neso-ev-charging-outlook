@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NESO charging outlook - demo</title>
+<style>
+  :root { --primary-text-color:#203040; --secondary-text-color:#536575; --primary-color:#006d91;
+    --card-background-color:#fff; --secondary-background-color:#eff4f7; --divider-color:#dce5eb; }
+  body { margin:0; padding:28px 16px; background:#edf3f7; font-family:system-ui,sans-serif; color:#203040; }
+  main { max-width:570px; margin:auto; }
+  .demo { margin:0 0 16px; font-size:13px; line-height:1.6; }
+  .demo strong { display:block; color:#006d91; font-size:12px; letter-spacing:.08em; }
+  .controls { display:flex; gap:10px; margin-bottom:16px; align-items:center; }
+  select { padding:8px; border:1px solid #b8c9d5; border-radius:6px; background:white; color:#203040; }
+  body.dark { --primary-text-color:#f0f4f7; --secondary-text-color:#b8c8d6; --primary-color:#71c5e2;
+    --card-background-color:#192938; --secondary-background-color:#253a4b; --divider-color:#3d5060;
+    background:#0f1c27; color:#f0f4f7; }
+</style>
+<main>
+  <p class="demo"><strong>UNOFFICIAL COMMUNITY CARD · DEMO DATA</strong>
+    Deterministic example, not a live forecast. No Home Assistant connection or household entities.</p>
+  <div class="controls"><label>Scenario <select id="scenario">
+    <option value="normal">14-night outlook</option><option value="identical">Identical wind</option>
+    <option value="missing">Missing night</option><option value="stale">Stale forecast</option>
+    <option value="network">Network error</option></select></label>
+    <label><input id="dark" type="checkbox"> Dark theme</label></div>
+  <div id="card"></div>
+  <p class="demo">All dates mean midnight on the listed date until 06:00 that same morning.
+    <a href="./tests.html">Run browser forecast tests</a></p>
+</main>
+<script type="module" src="./demo/demo.js"></script>
+</html>

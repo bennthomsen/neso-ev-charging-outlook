@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NESO card tests</title>
+<style>body{font:14px system-ui;padding:24px;background:#f4f7fa;color:#202b36}pre{white-space:pre-wrap;line-height:1.7}</style>
+<h1>NESO forecast tests</h1>
+<p id="summary">Running...</p>
+<pre id="results"></pre>
+<script type="module">
+  import { runTests } from "./tests/cases.js";
+  import { runDomTests } from "./tests/dom-cases.js";
+  window.testResults = await runTests((line) => {
+    document.querySelector("#results").textContent += line + "\n";
+  });
+  window.testResults.push(...await runDomTests((line) => {
+    document.querySelector("#results").textContent += line + "\n";
+  }));
+  const passed = window.testResults.filter((test) => test.passed).length;
+  document.querySelector("#summary").textContent = `${passed}/${window.testResults.length} tests passed`;
+</script>
+</html>

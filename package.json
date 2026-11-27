@@ -1,0 +1,14 @@
+{
+  "name": "neso-ev-charging-outlook",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Unofficial standalone Home Assistant dashboard card for NESO's 14-night national wind outlook",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node tests/run.mjs",
+    "check": "node --check neso-ev-charging-outlook.js && node --check demo/demo.js && node --check tests/cases.js && node --check tests/dom-cases.js && node --check scripts/preview.mjs && node scripts/validate.mjs",
+    "preview": "node scripts/preview.mjs"
+  }
+}
