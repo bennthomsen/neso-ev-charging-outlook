@@ -1,6 +1,6 @@
 {
   "name": "neso-ev-charging-outlook",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
   "description": "Unofficial standalone Home Assistant dashboard card for NESO's 14-night national wind outlook",

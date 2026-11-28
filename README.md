@@ -19,7 +19,7 @@ does not create a release or establish catalog acceptance.
 1. Copy the single root file `neso-ev-charging-outlook.js` into your Home Assistant
    configuration directory as `www/neso-ev-charging-outlook.js`. Create `www` if needed.
 2. In **Settings > Dashboards > Resources**, add
-   `/local/neso-ev-charging-outlook.js?v=0.1.0` as a **JavaScript module**.
+   `/local/neso-ev-charging-outlook.js?v=0.1.1` as a **JavaScript module**.
    Resource settings may require Advanced Mode on your user profile. With
    YAML-managed resources, use the equivalent entry below.
 3. Reload the browser, edit a dashboard, and choose **NESO charging outlook** in
@@ -37,7 +37,7 @@ change it. No entity selectors or household configuration exist.
 # Only for YAML-managed Lovelace resources:
 lovelace:
   resources:
-    - url: /local/neso-ev-charging-outlook.js?v=0.1.0
+    - url: /local/neso-ev-charging-outlook.js?v=0.1.1
       type: module
 ```
 

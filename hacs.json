@@ -1,5 +1,6 @@
 {
   "name": "NESO charging outlook",
+  "country": "GB",
   "content_in_root": true,
   "filename": "neso-ev-charging-outlook.js"
 }
